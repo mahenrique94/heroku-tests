@@ -3,6 +3,8 @@ const restify = require('restify')
 
 const server = restify.createServer()
 
+const port = process.env.PORT || 3000
+
 server.use(morgan((tokens, req, res) => {
     return [
         '[',
@@ -26,7 +28,7 @@ server.get('/', (req, res, next) => {
     next()
 })
 
-server.listen(3030, 'localhost', () => {
-    console.log('Server running, to access it go to http://localhost:3030')
+server.listen(port, () => {
+    console.log(`Server running, to access it go to http://localhost:${port}`)
     console.log('Use CTRL+C to stop it')
 })
