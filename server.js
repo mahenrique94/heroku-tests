@@ -26,7 +26,7 @@ server.get('/', (req, res, next) => {
     next()
 })
 
-server.listen(80, 'localhost', () => {
-    console.log('Server running, to access it go to http://localhost:80')
+server.listen(3030, 'localhost', () => {
+    console.log('Server running, to access it go to http://localhost:3030')
     console.log('Use CTRL+C to stop it')
 })
